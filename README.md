@@ -58,7 +58,7 @@ Addressing D7 first:
 | STREAM       | true | D10 | d3 | 0.0 | 0.0 | 1.0 |
 |        | false | D11 | d4 | 0.0 |  |  |
 | SLOPE       | flat | D12 |  | 0.0 | 1.0 | 0.0 |
-|        | moderate | D13 |  |  |  |  |
-|        | steep | D14 | d3,d4 |  |  |  |
+|        | moderate | D13 |  | 0.0 |  |  |
+|        | steep | D14 | d3,d4 | 1.0 |  |  |
 
 
