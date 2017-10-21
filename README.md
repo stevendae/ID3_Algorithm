@@ -25,7 +25,7 @@ Ecological Modeling Example:
 First step in building decision tree is to determine which of the three descriptive features is the best one to split the dataset on at the root node. Algorithm does this by computing the information gain for each feature. The total entropy for this dataset, which is required to calculate information gain, is computed as 
 
 ##### H(VEGETATION,D) = -∑ P(VEGETATION = l) x log2(P(VEGETATION = l)) 
-###### lE{chapparal,riparian,conifer}
+###### l ∈ {chapparal,riparian,conifer}
 
 ##### = - (((3/7)xlog2(3/7))+(2/7xlog2(2/7))+(2/7xlog2(2/7)))
 ##### = 1.5567 bits
