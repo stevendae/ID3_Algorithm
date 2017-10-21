@@ -61,4 +61,22 @@ Addressing D7 first:
 |        | moderate | D13 |  | 0.0 |  |  |
 |        | steep | D14 | d3,d4 | 1.0 |  |  |
 
+Stream has highest info gain. D10 and D11 partition into pure sets. D12 and D13 have no instances, an D14 has two where they can be partitioned for STREAM. 
+
+Perform same method for D8. You will arrive to a situation where for a moderate slope, there are no instances that have the results of the descriptive features and outputs a target. Data does not exist. Hence it returns the chapparal target level because chapparal is the majority target level in the partition at the parent node (D8) of this leaf node. 
+
+This example illustrates one way in which the predictions made by the model generalize beyond the dataset. Whether generalizations made by the model are correct will depend on whether the assumptions used in generating the model (i.e. the inductive bias) are appropriate. 
+
+The ID3 algorithm works in exactly the same way for larger, more complicated datasets; there is simply more computation involved. Since it was first proposed, there have been many modifications to the original ID3 algorithm to handle variations that are common in real-world datasets. 
+
+### Extensions and Variations
+
+Entropy-based information gain, however, does have some drawbacks. In particular, it preferences features with many levels because these features will split the data into many small subsets, which will tend to be pure, irrespective of any correlation between the descriptive feature and the target feature.
+
+One way of addressing this issue is to use information gain ratio instead of entropy. The information gain ratio is computed by dividing the information gain of a feature by the amount of information used to determine the value of the feature
+
+
+
+
+
 
