@@ -29,3 +29,15 @@ First step in building decision tree is to determine which of the three descript
 
 ##### = - (((3/7) x log2(3/7)) + (2/7 x log2(2/7)) + (2/7 x log2(2/7)))
 ##### = 1.5567 bits
+
+| SPLIT BY FEATURE    | LEVEL  | PARTITION  | INSTANCES  | PARTITION ENTROPY  | REM.  | INFO GAIN  |
+| ------------- |:-------------:|:-------------:|:-------------:|:-----:|:-------------:|:-----:|
+| STREAM       | true | D1 | d2,d3,d6,d7 | 1.5000 | 1.2507 | 0.3060 |
+|        | false | D2 | d1,d4,d5,d7 | 0.9183 |  |  |
+| SLOPE       | flat | D3 | d5 | 0.0 | 0.9793 | 0.5774 |
+|        | moderate | D4 | d2 | 0.0 |  |  |
+|        | steep | D5 | d1,d3,d4,d6,d7 | 1.3710 |  |  |
+| ELEVATION       | true | D1 | d2,d3,d6,d7 |  | 1.2507 | 0.3060 |
+|        | false | D2 | d1,d4,d5,d7 | 0.9183 |  |  |
+| STREAM       | true | D1 | d2,d3,d6,d7 | 1.5000 | 1.2507 | 0.3060 |
+|        | false | D2 | d1,d4,d5,d7 | 0.9183 |  |  |
