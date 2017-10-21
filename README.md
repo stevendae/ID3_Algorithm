@@ -27,5 +27,5 @@ First step in building decision tree is to determine which of the three descript
 ##### H(VEGETATION,D) = -∑ P(VEGETATION = l) x log2(P(VEGETATION = l)) 
 ###### l ∈ {chapparal,riparian,conifer}
 
-##### = - (((3/7)xlog2(3/7))+(2/7xlog2(2/7))+(2/7xlog2(2/7)))
+##### = - (((3/7) x log2(3/7)) + (2/7 x log2(2/7)) + (2/7 x log2(2/7)))
 ##### = 1.5567 bits
