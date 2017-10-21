@@ -41,3 +41,24 @@ First step in building decision tree is to determine which of the three descript
 |        | medium | D7 | d3,d4 | 1.0 |  |  |
 |       | high | D8 | d1,d5,d7 | 0.9183 |  | |
 |        | highest | D9 | d6 | 0.0 |  |  |
+
+Elevation has the largest information gain of the three features and so is selected by the algorithm at the root node of the tree. D6 and D9 are pure sets, and these partitions can be converted into leaf nodes. The D7 and D8 partitions, however, contain instances with a mixture of target feature levels, so the algorithm needs to continue splitting these partitions. The next descriptive feature is selected using the same procedure of determining which feature has the highest information gain.
+
+Addressing D7 first:
+
+##### H(VEGETATION,D7) = -∑ P(VEGETATION = l) x log2(P(VEGETATION = l)) 
+###### l ∈ {chapparal,riparian,conifer}
+
+##### = - ((1/2) x log2(1/2)) + (1/2 x log2(1/2)) + (0/2 x log2(0/2))
+##### = 1.0 bits
+
+
+| SPLIT BY FEATURE    | LEVEL  | PARTITION  | INSTANCES  | PARTITION ENTROPY  | REM.  | INFO GAIN  |
+| ------------- |:-------------:|:-------------:|:-------------:|:-----:|:-------------:|:-----:|
+| STREAM       | true | D10 | d3 | 0.0 | 0.0 | 1.0 |
+|        | false | D11 | d4 | 0.0 |  |  |
+| SLOPE       | flat | D12 |  | 0.0 | 1.0 | 0.0 |
+|        | moderate | D13 |  |  |  |  |
+|        | steep | D14 | d3,d4 |  |  |  |
+
+
