@@ -73,11 +73,22 @@ The ID3 algorithm works in exactly the same way for larger, more complicated dat
 
 Entropy-based information gain, however, does have some drawbacks. In particular, it preferences features with many levels because these features will split the data into many small subsets, which will tend to be pure, irrespective of any correlation between the descriptive feature and the target feature.
 
-One way of addressing this issue is to use information gain ratio instead of entropy. The information gain ratio is computed by dividing the information gain of a feature by the amount of information used to determine the value of the feature.
+One way of addressing this issue is to use information gain ratio instead of entropy. The information gain ratio is computed by dividing the information gain of a feature by the amount of information or entropy used to determine the value of the feature.
 
 Information gain has the advantage that it is computationally less expensive than information gain ratio. If there is variation across the number of values in the domain of the descriptive features in a dataset, however, information gain ratio may be a better option. These factors aside, the effectiveness of descriptive feature selection metrics can vary from domain to domain. So we should experiment with different metrics to find which one results in the best models for each dataset.
 
 Another commonly used measure of impurity is the Gini index:
+
+The Gini index is a measure of impurity in a set. It is valued from 0 to 1 which makes comparing impurities intuitively easier. The Gini index is understood as calculating how odten the target levels of instances in a dataset would be misclassified if predicitons were made based only on the distribution of the target levels in the dataset.
+
+Dealing with continuous features:
+- sort according to continuous feature
+- define where target features change
+- calculate boundary by taking average
+- calculate info gain made at each threshold
+- choose another threshold in the decision tree if heterogeneous sets remain
+
+
 
 
 
