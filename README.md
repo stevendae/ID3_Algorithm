@@ -88,6 +88,10 @@ Dealing with continuous features:
 - calculate info gain made at each threshold
 - choose another threshold in the decision tree if heterogeneous sets remain
 
+#### Predicting Continuous Targets
+
+When we use a decision tree to make predictions for a continuous target, we refer to the tree as a regression tree. Sometimes the task of predicting a continuous target is referred to as a regression task. To avoid extreme partitioning which leads to overfitting, we introduce an early stopping criterion into the algorithm for building regression trees. The simplest early stopping creterion is to stop partitioning the dataset if the number of training instances in the partition at the node we are processing is less than some threshold, usually around 5% of the overall dataset size. This early stopping criterion replaces the base case.
+
 
 
 
